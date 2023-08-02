@@ -22,5 +22,3 @@ var mySqrt = function (x) {
         }
     }
 };
-
-console.log(mySqrt(9000))
