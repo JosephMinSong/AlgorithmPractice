@@ -3,6 +3,7 @@
 const uniqueString = "abcdefg";
 const string = "abbcdd";
 
+// Missed base case - there are only 128 characters. String cannot be unique if length is greater than 128. 
 // With hash table
 function isUnique1(str) {
     let hash = {};
@@ -29,7 +30,7 @@ function isUnique2(str) {
     return true
 }
 
-
+// We could also make a hash of all the alphabet letters and then if we encounter that letter, set it to a true bool. If we encounter it again, if the bool is true, then we have a duplicate
 
 console.log(isUnique1(uniqueString));
 console.log(isUnique1(string));
