@@ -1,12 +1,12 @@
-var removeDuplicates = function(nums) {
-    let i = 0 
+var removeDuplicates = function (nums) {
+    let i = 0
     let count = 0
     let seen = nums[0]
-    for (let j = 0; j < nums.length ; j++){
-        if (nums[j] == seen && count >= 2){
+    for (let j = 0; j < nums.length; j++) {
+        if (nums[j] == seen && count >= 2) {
             continue;
-        } 
-        
+        }
+
         if (nums[j] == seen) {
             nums[i] = nums[j]
             i++
@@ -16,14 +16,14 @@ var removeDuplicates = function(nums) {
             seen = nums[j]
             nums[i] = nums[j]
             i++
-        } 
+        }
     }
     return i
 };
 
 // 80. Remove Duplicates from sorted array II
 
-var removeDuplicates = function(nums) {
+var removeDuplicates = function (nums) {
     let i = 0;
     let seen = nums[0];
     let count = 0;
@@ -48,11 +48,11 @@ var removeDuplicates = function(nums) {
 };
 
 // Joe's solution
-var removeDuplicates = function(nums) {
-    let i = 0 
+var removeDuplicates = function (nums) {
+    let i = 0
     let count = 0
     let seen = nums[0]
-    for (let j = 0; j < nums.length ; j++){
+    for (let j = 0; j < nums.length; j++) {
         if (nums[j] == seen && count >= 2) continue;
         if (nums[j] == seen) {
             nums[i] = nums[j]
