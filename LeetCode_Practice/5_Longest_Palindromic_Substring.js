@@ -6,7 +6,7 @@ var longestPalindrome = function (s) {
     let longest = 0;
     let l_i = 0;
     let r_i = 0;
-
+    4
     for (let i = 0; i < s.length; i++) {
 
         // checking odd length palindromes
