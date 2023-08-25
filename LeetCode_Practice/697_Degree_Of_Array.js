@@ -37,3 +37,41 @@ var findShortestSubArray = function (nums) {
 
     return result
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findShortestSubArray = function (nums) {
+    let degree = 0;
+    let answer = Infinity;
+
+    let hash = {};
+    let freqHash = {};
+
+    for (let i = 0; i < nums.length; i++) {
+
+        const num = nums[i]
+
+        if (!hash[num]) {
+            hash[num] = [i]
+            freqHash[num] = 1
+        } else {
+            hash[num].push(i)
+            freqHash[num]++
+        }
+
+        degree = Math.max(freqHash[num], degree)
+    }
+
+    for (let key in hash) {
+        const indexArray = hash[key]
+        if (indexArray.length == degree) {
+            const diff = indexArray[indexArray.length - 1] - indexArray[0]
+
+            answer = Math.min(diff + 1, answer)
+        }
+    }
+
+    return answer
+};
