@@ -33,6 +33,7 @@ class LinkedList {
         return this
     }
 
+    // Remove any node from our list
     remove(node) {
         node.prev.next = node.next;
         node.next.prev = node.prev;
