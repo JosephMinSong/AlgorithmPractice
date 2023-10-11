@@ -28,3 +28,33 @@ var reverseList = function (head) {
 
     return newHead
 };
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+
+var reverseList = function (head) {
+
+    if (!head) return null
+    if (!head.next) return head
+
+    let runner = head;
+    let prev = null;
+
+    while (runner) {
+        const next = runner.next;
+        runner.next = prev;
+        prev = runner;
+        runner = next;
+    }
+
+    return prev
+};
