@@ -23,11 +23,6 @@ var isWinner = function (player1, player2) {
         }
     }
 
-    if (player1Score > player2Score) {
-        return 1
-    } else if (player1Score < player2Score) {
-        return 2
-    } else {
-        return 0
-    }
+    return player1Score == player2Score ? 0 :
+        player1Score > player2Score ? 1 : 2
 };
